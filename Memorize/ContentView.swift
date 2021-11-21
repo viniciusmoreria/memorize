@@ -37,6 +37,8 @@ struct CardView: View {
                 CardShape.fill().foregroundColor(.white)
                 CardShape.strokeBorder(lineWidth: 3)
                 Text(card.content).font(.largeTitle)
+            } else if card.isMatched {
+                CardShape.opacity(0)
             } else {
                 CardShape.fill()
             }
